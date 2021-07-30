@@ -1,0 +1,23 @@
+{
+  "name": "playwright_qa",
+  "version": "1.0.0",
+  "description": "Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allanpfreitas/playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allanpfreitas/playwright/issues"
+  },
+  "homepage": "https://github.com/allanpfreitas/playwright#readme",
+  "dependencies": {
+    "playwright": "^1.13.1"
+  }
+}
