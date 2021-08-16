@@ -15,9 +15,7 @@ const {chromium} = require ('playwright');
     await page.type('input[type="password"]', 'test12345')
     //await page.click('"Sign in"', {position: {x: 0, y:0}, button:'left', modifiers:['Shift'], force: true, timeout:45000 })
     //await page.dblclick('form >> "Sign in"') // performs a double click
-    await page.focus('form >> "Sign in"')
-
-    
+    await page.focus('form >> "Sign in"')    
     await page.screenshot({
         path: `todo.png`
     }) 

@@ -7,8 +7,9 @@ const {chromium} = require ('playwright');
     // const context = await browser.newContext()
     // const page = await context.newPage()
     const page = await browser.newPage()
-    await page.goto('http://todomvc.com/examples/react/#/')
-    
+    await page.goto('http://todomvc.com/examples/react/#/',{
+        waitUntil: 'networkidle'
+    })
     const input = await page.$('.new-todo')
     await input.fill('Task_1')
     await input.press("Enter")
@@ -18,9 +19,9 @@ const {chromium} = require ('playwright');
     const checks = await page.$$('.toggle')
     checks.forEach(checks => checks.check())
 
-
     await page.screenshot({
         path: `todo.png`
-    }) 
-    //await browser.close()
+    })
+    
+    await browser.close()
 }) ()
